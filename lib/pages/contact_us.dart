@@ -12,6 +12,7 @@ class Contactus extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           centerTitle: true,
           title: Text(
             'Contacts',
@@ -23,20 +24,23 @@ class Contactus extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.pink[100],
-        body: ContactUs(
-          cardColor: Colors.white,
-          textColor: Colors.black,
-          logo: AssetImage('assets/images/angela2.jpg'),
-          email: "angelagaibort@hotmail.com",
-          companyName: 'Beauty Studio',
-          companyColor: Colors.white,
-          dividerThickness: 2,
-          dividerColor: Colors.white,
-          phoneNumber: '1+ 804-735-8835',
-          tagLine: 'Hair Stylist',
-          taglineColor: Colors.white,
-          instagram: '',
-          facebookHandle: '',
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ContactUs(
+            cardColor: Colors.white,
+            textColor: Colors.black,
+            logo: AssetImage('assets/images/angela2.jpg'),
+            email: "angelagaibort@hotmail.com",
+            companyName: 'Beauty Studio',
+            companyColor: Colors.white,
+            dividerThickness: 2,
+            dividerColor: Colors.white,
+            phoneNumber: '1+ 804-735-8835',
+            tagLine: 'Hair Stylist',
+            taglineColor: Colors.white,
+            instagram: 'https://www.instagram.com/eidde606/',
+            facebookHandle: '',
+          ),
         ),
       ),
     );

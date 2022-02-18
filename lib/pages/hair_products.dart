@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:precious_hair_salon/pages/contact_us.dart';
 import 'package:precious_hair_salon/models/products_screen.dart';
-import 'package:precious_hair_salon/services.dart';
+import 'package:precious_hair_salon/pages/schedule.dart';
+import 'package:precious_hair_salon/pages/services.dart';
 
 void main() {
   runApp(HairProducts());
@@ -28,8 +29,8 @@ class HairProducts extends StatelessWidget {
                   child: Text(''),
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/longbeauty.gif"),
-                        fit: BoxFit.fitHeight),
+                        image: AssetImage("assets/images/logo1.jpeg"),
+                        fit: BoxFit.fitWidth),
                   ),
                 ),
               ),
@@ -111,6 +112,18 @@ class HairProducts extends StatelessWidget {
                 image: AssetImage("assets/images/angela.gif"),
                 fit: BoxFit.cover),
           ),
+        ),
+        floatingActionButton: FloatingActionButton.extended(
+          label: Text('Booking'),
+          backgroundColor: Color.fromARGB(255, 245, 159, 186),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Schedule(),
+              ),
+            );
+          },
         ),
       ),
     );
