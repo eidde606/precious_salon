@@ -1,17 +1,21 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
-import 'package:precious_hair_salon/pages/contact_us.dart';
+import 'package:precious_hair_salon/main.dart';
+import 'package:precious_hair_salon/pages/create_account.dart';
+import 'package:precious_hair_salon/pages/sign_up.dart';
+
+import './contact_us.dart';
 import 'package:precious_hair_salon/models/products_screen.dart';
-import 'package:precious_hair_salon/pages/schedule.dart';
+
 import 'package:precious_hair_salon/pages/services.dart';
 
 void main() {
-  runApp(HairProducts());
+  runApp(HomePage());
 }
 
-class HairProducts extends StatelessWidget {
-  const HairProducts({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +86,7 @@ class HairProducts extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Contactus(),
+                      builder: (context) => ContactUs(),
                     ),
                   );
                 },
@@ -114,13 +118,13 @@ class HairProducts extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton.extended(
-          label: Text('Booking'),
-          backgroundColor: Color.fromARGB(255, 245, 159, 186),
+          label: Text('Sign in'),
+          backgroundColor: Colors.pink[100],
           onPressed: () {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Schedule(),
+                builder: (context) => SignUp(),
               ),
             );
           },

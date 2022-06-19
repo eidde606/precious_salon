@@ -1,46 +1,99 @@
-// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
-
-import 'package:contactus/contactus.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(Contactus());
+class ContactUs extends StatefulWidget {
+  const ContactUs({Key? key}) : super(key: key);
 
-class Contactus extends StatelessWidget {
+  @override
+  State<ContactUs> createState() => _ContactUsState();
+}
+
+class _ContactUsState extends State<ContactUs> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          centerTitle: true,
-          title: Text(
-            'Contacts',
-          ),
-          backgroundColor: Colors.pink.shade100,
-          leading: IconButton(
-            onPressed: () => Navigator.of(context).pop(),
-            icon: Icon(Icons.arrow_back),
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
+        backgroundColor: Color.fromARGB(255, 251, 196, 214),
+        automaticallyImplyLeading: false,
+        leading: BackButton(
+          onPressed: (() => Navigator.of(context).pop(context)),
         ),
-        backgroundColor: Colors.pink[100],
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ContactUs(
-            cardColor: Colors.white,
-            textColor: Colors.black,
-            logo: AssetImage('assets/images/angela2.jpg'),
-            email: "angelagaibort@hotmail.com",
-            companyName: 'Beauty Studio',
-            companyColor: Colors.white,
-            dividerThickness: 2,
-            dividerColor: Colors.white,
-            phoneNumber: '1+ 804-735-8835',
-            tagLine: 'Hair Stylist',
-            taglineColor: Colors.white,
-            instagram: 'https://www.instagram.com/eidde606/',
-            facebookHandle: '',
-          ),
+      ),
+      resizeToAvoidBottomInset: false,
+      backgroundColor: Color(0xFFF4B0C6),
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Contact Me',
+              style: TextStyle(
+                fontSize: 32.0,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            Text(
+              'Feel free to contact us',
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32.0),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 16.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.white54,
+                      filled: true,
+                      hintText: "Name",
+                      border: InputBorder.none,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      fillColor: Colors.white54,
+                      filled: true,
+                      hintText: "Email",
+                      border: InputBorder.none,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  TextField(
+                    maxLines: 7,
+                    maxLength: 1000,
+                    decoration: InputDecoration(
+                      fillColor: Colors.white54,
+                      filled: true,
+                      hintText: "Message",
+                      border: InputBorder.none,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8.0,
+                  ),
+                  MaterialButton(
+                    height: 60.0,
+                    minWidth: double.infinity,
+                    color: Colors.white38,
+                    onPressed: (() {}),
+                    child: Text(
+                      'SUBMIT',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white54,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

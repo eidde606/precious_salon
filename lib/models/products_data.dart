@@ -11,6 +11,7 @@ const PRODUCT_LIST = [
       title: 'Keratin',
       color: Colors.grey,
       image: 'assets/images/keratin.png'),
+
   Products(
       id: 'c2',
       title: 'Brush',
