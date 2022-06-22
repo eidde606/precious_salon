@@ -19,7 +19,6 @@ class _CreateAccountState extends State<CreateAccount> {
       appBar: AppBar(
         centerTitle: false,
         backgroundColor: Colors.pink[100],
-        title: Text('Beauty Studio'),
       ),
       body: ListView(
         children: <Widget>[

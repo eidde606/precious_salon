@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:precious_hair_salon/firebase_options.dart';
 
-import 'package:precious_hair_salon/pages/account.dart';
-import 'package:precious_hair_salon/pages/create_account.dart';
-import 'package:precious_hair_salon/pages/password_recovery.dart';
+import 'package:precious_hair_salon/screens/account.dart';
+import 'package:precious_hair_salon/screens/create_account.dart';
+import 'package:precious_hair_salon/screens/password_recovery.dart';
 
 void main(List<String> args) {
   runApp(SignUp());

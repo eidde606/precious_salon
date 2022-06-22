@@ -27,11 +27,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  carousel_slider: ^4.1.1
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.3
   firebase_auth: ^3.3.19
   firebase_core: ^1.17.1
   flutter:
     sdk: flutter
+  google_fonts: ^3.0.1
+  intl: ^0.17.0
   provider: ^6.0.3
 
 dev_dependencies:
@@ -52,12 +56,11 @@ flutter:
     - assets/images/logo2.jpeg
     - assets/images/logo3.png
     - assets/images/coloranimation.gif
-    - assets/images/longbeauty.gif
+
     - assets/images/angela.gif
     - assets/images/angela2.jpg
-    - assets/images/keratin.png
-    - assets/images/beauty.jpg
 
+    - assets/images/beauty.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
