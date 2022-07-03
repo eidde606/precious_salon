@@ -49,14 +49,16 @@ class _HomePageState extends State<HomePage> {
     return Stack(
       children: <Widget>[
         Image.asset(
-          'images/background.png',
+          'assets/images/background.png',
           height: MediaQuery.of(context).size.height,
+          width: double.infinity,
           fit: BoxFit.fill,
         ),
         // decoration: BoxDecoration(gradient: LayoutTheme.of(context).background),
         Scaffold(
           backgroundColor: Colors.transparent,
           floatingActionButton: FloatingActionButton.extended(
+              icon: Icon(Icons.add),
               backgroundColor: Colors.black45,
               onPressed: (() {
                 Navigator.push(

@@ -10,21 +10,28 @@ class Category extends Equatable {
   });
 
   @override
-  // TODO: implement props
   List<Object?> get props => [name, imageUrl];
 
   static List<Category> categories = [
-    Category(
+    const Category(
       name: 'Hair',
-      imageUrl: 'images/hair.jpg',
+      imageUrl: 'assets/images/hair.jpg',
     ),
-    Category(
-      name: 'Hair Styles',
-      imageUrl: 'images/hair-salon.jpg',
+    const Category(
+      name: 'Logo',
+      imageUrl: 'assets/images/logo1.jpeg',
     ),
-    Category(
+    const Category(
       name: 'Beauty',
-      imageUrl: 'images/blonde-babylights.jpg',
+      imageUrl: 'assets/images/blondebabylights.jpg',
+    ),
+    const Category(
+      name: 'Beauty2',
+      imageUrl: 'assets/images/hairsalon.jpg',
+    ),
+    const Category(
+      name: 'Beauty',
+      imageUrl: 'assets/images/angela.gif',
     )
   ];
 }
