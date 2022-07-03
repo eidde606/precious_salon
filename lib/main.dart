@@ -2,7 +2,7 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:precious_hair_salon/screens/landing_page.dart';
+import 'package:precious_hair_salon/screens/landing_screen.dart';
 import 'package:precious_hair_salon/themes/default.dart';
 
 import 'firebase_options.dart';
