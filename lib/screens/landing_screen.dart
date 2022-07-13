@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:precious_hair_salon/main.dart';
 import 'package:precious_hair_salon/models/models.dart';
 import 'package:precious_hair_salon/screens/create_account.dart';
+import 'package:precious_hair_salon/screens/product_detail_screen.dart';
 import 'package:precious_hair_salon/screens/sign_up.dart';
 import 'package:precious_hair_salon/themes/default.dart';
 
@@ -13,7 +14,7 @@ import '../widgets/hero_carousel_card.dart';
 import './contact_us.dart';
 import 'package:precious_hair_salon/models/products_screen.dart';
 
-import 'package:precious_hair_salon/screens/services.dart';
+import 'package:precious_hair_salon/screens/products_overview_screen.dart';
 
 void main() {
   runApp(HomePage());
@@ -33,6 +34,9 @@ class _MyWidgetState extends State<MyWidget> {
       debugShowCheckedModeBanner: false,
       title: 'Beauty Studio',
       home: HomePage(),
+      routes: {
+        ProductDetailScreen.routeName: ((context) => ProductDetailScreen())
+      },
     );
   }
 }
@@ -57,46 +61,30 @@ class _HomePageState extends State<HomePage> {
         // decoration: BoxDecoration(gradient: LayoutTheme.of(context).background),
         Scaffold(
           backgroundColor: Colors.transparent,
-          floatingActionButton: FloatingActionButton.extended(
-              icon: Icon(Icons.add),
-              backgroundColor: Colors.black45,
-              onPressed: (() {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: ((context) => (SignUp())),
-                  ),
-                );
-              }),
-              label: Text('Sign up')),
+          // floatingActionButton: FloatingActionButton.extended(
+          //     backgroundColor: Colors.black45,
+          //     onPressed: (() {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: ((context) => (SignUp())),
+          //         ),
+          //       );
+          //     }),
+          //     label: Text('Sign up')),
           appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            centerTitle: true,
+            elevation: 5,
             bottom: PreferredSize(
               child: Text(
                 'Beauty Studio',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.white,
                 ),
               ),
               preferredSize: Size.fromHeight(0),
             ),
-
-            backgroundColor: Colors.black45,
-            centerTitle: true,
-            elevation: 5,
-            // flexibleSpace: Container(
-            //   decoration: BoxDecoration(
-            //     gradient: LinearGradient(
-            //       colors: [
-            //         const Color(0xFFFC74BA),
-            //         const Color(0xFFFFFFFF),
-            //       ],
-            //       begin: const FractionalOffset(1.8, 0.8),
-            //       end: const FractionalOffset(0.0, 0.0),
-            //       stops: [0.0, 1.0],
-            //       tileMode: TileMode.clamp,
-            //     ),
-            //   ),
-            // ),
             title: Text(
               'Angel\'s Precious',
               style: GoogleFonts.courgette(
@@ -110,17 +98,23 @@ class _HomePageState extends State<HomePage> {
                     offset: Offset(1.5, -1.5),
                     color: Colors.blueGrey,
                   ),
-                  // Shadow(
-                  //   offset: Offset(1.5, 1.5),
-                  //   color: Colors.white,
-                  // ),
-                  // Shadow(
-                  //   offset: Offset(-1.5, 1.5),
-                  //   color: Colors.white,
-                  // ),
                 ],
               ),
             ),
+            actions: [
+              IconButton(
+                alignment: Alignment.topRight,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignUp(),
+                    ),
+                  );
+                },
+                icon: Icon(Icons.login),
+              ),
+            ],
           ),
           body: Center(
             child: Container(
